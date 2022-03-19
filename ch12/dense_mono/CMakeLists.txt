@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "-std=c++11 -march=native -O3")
 # Eigen
 include_directories("/usr/include/eigen3")
 # OpenCV
-find_package(OpenCV 3.1 REQUIRED)
+find_package(OpenCV 4.1 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 # Sophus
 find_package(Sophus REQUIRED)
@@ -20,3 +20,4 @@ set(THIRD_PARTY_LIBS
 
 add_executable(dense_mapping dense_mapping.cpp)
 target_link_libraries(dense_mapping ${THIRD_PARTY_LIBS})
+target_link_libraries(dense_mapping Sophus::Sophus)
