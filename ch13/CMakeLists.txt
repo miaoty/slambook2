@@ -3,6 +3,8 @@ project(myslam)
 
 set(CMAKE_BUILD_TYPE Release)
 
+set(CMAKE_CXX_STANDARD 14)
+
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wall")
 set(CMAKE_CXX_FLAGS_RELEASE  "-std=c++11 -O3 -fopenmp -pthread")
 
@@ -15,7 +17,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 include_directories("/usr/include/eigen3")
 
 # OpenCV
-find_package(OpenCV 3.1 REQUIRED)
+find_package(OpenCV 4.1 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # pangolin
@@ -25,7 +27,7 @@ include_directories(${Pangolin_INCLUDE_DIRS})
 # Sophus
 find_package(Sophus REQUIRED)
 include_directories(${Sophus_INCLUDE_DIRS})
-
+include_directories("/usr/local/include/sophus")
 # G2O
 find_package(G2O REQUIRED)
 include_directories(${G2O_INCLUDE_DIRS})

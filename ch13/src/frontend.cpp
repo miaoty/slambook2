@@ -3,7 +3,7 @@
 //
 
 #include <opencv2/opencv.hpp>
-
+#include <opencv2/imgproc/imgproc_c.h>
 #include "myslam/algorithm.h"
 #include "myslam/backend.h"
 #include "myslam/config.h"

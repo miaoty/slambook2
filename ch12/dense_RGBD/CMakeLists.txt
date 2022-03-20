@@ -21,9 +21,13 @@ include_directories(${OCTOMAP_INCLUDE_DIRS})
 
 add_executable(pointcloud_mapping pointcloud_mapping.cpp)
 target_link_libraries(pointcloud_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES})
+# target_link_libraries(pointcloud_mapping Sophus::Sophus)
 
 add_executable(octomap_mapping octomap_mapping.cpp)
 target_link_libraries(octomap_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES} ${OCTOMAP_LIBRARIES})
+# target_link_libraries(octomap_mapping Sophus::Sophus)
+
 
 add_executable(surfel_mapping surfel_mapping.cpp)
 target_link_libraries(surfel_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES})
+# target_link_libraries(surfel_mapping Sophus::Sophus)
